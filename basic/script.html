@@ -10,7 +10,7 @@
 <script>
   (async () => {
 
-    const document = appearances[0].document; // window.appearances from editor.html
+    const documentModel = appearances[0].document; // window.appearances from editor.html
     const module = await import('STATIC_RESOURCES_URL/script.esm.js');
     const config = {staticResourcesUrl: 'STATIC_RESOURCES_URL'}
     const clWidgetApi = new module.WidgetAPI(config);
@@ -21,14 +21,14 @@
         insertType: 'AFTER_BEGIN'
       }]
     }
-    const widgetDisplay = clWidgetApi.showWidget(document, widgetConfig);
-    widgetDisplay.on('click', (e) => {
+    const widgetDisplay = clWidgetApi.showWidget(documentModel, widgetConfig);
+    widgetDisplay.on('CLICK', (e) => {
       console.log('click', e);
     });
-    widgetDisplay.on('close', (e) => {
+    widgetDisplay.on('CLOSE_WIDGET', (e) => {
       console.log('close', e);
     });
-    widgetDisplay.on('subscribe', (e) => {
+    widgetDisplay.on('CONTACT_DATA_SUBMIT', (e) => {
       console.log('data', e.data.email);
       console.log('data', e.data.phone);
       console.log('data', e.data.firstName);
