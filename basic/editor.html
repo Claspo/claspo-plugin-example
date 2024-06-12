@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.8.1/rxjs.umd.min.js"
+        integrity="sha512-D9LDs8YUUVa4V9Gl4Zb+xqRAc7RCzooR3+zzebgK2RMu/KU+dh90pbjEEMzPiSyRSGbSp9j1pZnrO4joGa5WEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const of = window.rxjs.of;
+  const mockObservableWithResponse = (body) => () => of({body});
+
+  let widgetId = 123;
+  let widgetLanguage = 'en';
+  let userInterfaceLanguage = 'en';
+  let countryCode = 'US';
+
+  window.appearances = [
+    {
+      "id": widgetId,
+      "language": widgetLanguage,
+      "origin": true,
+      "document": JSON.stringify({
+        "shared": {
+          "mobileBreakpointWidth": 576,
+          "headerFontFamily": "Montserrat",
+          "textFontFamily": "Montserrat",
+          "textClasses": {
+            "cl-text-class-h1": {
+              "id": "cl-text-class-h1",
+              "name": "H1",
+              "isHeader": true,
+              "styleAttributes": {
+                "color": "rgba(0, 0, 0, 1)",
+                "textAlign": "center",
+                "lineHeight": "120%",
+                "fontWeight": "700",
+                "fontSize": "25px",
+                "textShadow": "none",
+                "letterSpacing": "0px",
+                "fontFamily": null
+              },
+              "placeholderStyleAttributes": {
+                "color": "rgb(0, 0, 0)"
+              }
+            },
+            "cl-text-class-regular-text": {
+              "id": "cl-text-class-regular-text",
+              "name": "Regular text",
+              "isHeader": false,
+              "styleAttributes": {
+                "color": "rgba(13, 12, 12, 1)",
+                "textAlign": "center",
+                "lineHeight": "120%",
+                "fontWeight": "300",
+                "fontSize": "15px",
+                "textShadow": "none",
+                "letterSpacing": "0px",
+                "fontFamily": null
+              },
+              "placeholderStyleAttributes": {
+                "color": "rgb(0, 0, 0)"
+              }
+            },
+            "cl-text-class-button": {
+              "id": "cl-text-class-button",
+              "name": "Button text",
+              "isHeader": false,
+              "styleAttributes": {
+                "color": "rgba(255, 255, 255, 1)",
+                "textAlign": "center",
+                "lineHeight": "120%",
+                "fontWeight": "700",
+                "fontSize": "16px",
+                "textShadow": "none",
+                "letterSpacing": "0px",
+                "fontFamily": null
+              },
+              "placeholderStyleAttributes": {}
+            },
+            "cl-text-class-input-label": {
+              "id": "cl-text-class-input-label",
+              "name": "Title",
+              "isHeader": false,
+              "styleAttributes": {
+                "color": "rgba(24, 20, 20, 1)",
+                "textAlign": "center",
+                "lineHeight": "120%",
+                "fontWeight": "700",
+                "fontSize": "15px",
+                "textShadow": "none",
+                "letterSpacing": "0px",
+                "fontFamily": "Poppins"
+              },
+              "placeholderStyleAttributes": {
+                "color": "rgb(0, 0, 0)"
+              }
+            },
+            "cl-text-class-f2677636-569f-46bf-9e13-fb55ca29268e": {
+              "id": "cl-text-class-f2677636-569f-46bf-9e13-fb55ca29268e",
+              "name": "Title mobile",
+              "isHeader": false,
+              "styleAttributes": {
+                "color": "rgba(0, 0, 0, 1)",
+                "textAlign": "center",
+                "lineHeight": "120%",
+                "fontWeight": "400",
+                "fontSize": "12px",
+                "textShadow": "none",
+                "letterSpacing": "0px",
+                "fontFamily": "Poppins"
+              },
+              "placeholderStyleAttributes": {
+                "color": "rgb(0, 0, 0)"
+              }
+            },
+            "cl-text-class-754b776e-789f-452d-983b-869db3ab0df4": {
+              "id": "cl-text-class-754b776e-789f-452d-983b-869db3ab0df4",
+              "name": "Subtitle mobile",
+              "isHeader": true,
+              "styleAttributes": {
+                "color": "rgba(0, 0, 0, 1)",
+                "textAlign": "center",
+                "lineHeight": "120%",
+                "fontWeight": "700",
+                "fontSize": "25px",
+                "textShadow": "none",
+                "letterSpacing": "0px",
+                "fontFamily": null
+              },
+              "placeholderStyleAttributes": {
+                "color": "rgb(0, 0, 0)"
+              }
+            },
+            "cl-text-class-f38ae9ad-f7ac-4a90-88e7-1edb856cd7e5": {
+              "id": "cl-text-class-f38ae9ad-f7ac-4a90-88e7-1edb856cd7e5",
+              "name": "Button text mobile",
+              "isHeader": false,
+              "styleAttributes": {
+                "color": "rgba(255, 255, 255, 1)",
+                "textAlign": "center",
+                "lineHeight": "120%",
+                "fontWeight": "700",
+                "fontSize": "12px",
+                "textShadow": "none",
+                "letterSpacing": "0px",
+                "fontFamily": null
+              },
+              "placeholderStyleAttributes": {}
+            },
+            "cl-text-class-6678abb0-b059-41ad-9ec8-744e85096dc1": {
+              "id": "cl-text-class-6678abb0-b059-41ad-9ec8-744e85096dc1",
+              "name": "Input text",
+              "isHeader": false,
+              "styleAttributes": {
+                "color": "rgba(0, 0, 0, 1)",
+                "textAlign": "start",
+                "lineHeight": "120%",
+                "fontWeight": "300",
+                "fontSize": "16px",
+                "textShadow": "none",
+                "fontFamily": null,
+                "letterSpacing": "0px"
+              },
+              "placeholderStyleAttributes": {
+                "color": "rgba(0, 0, 0, 1)"
+              }
+            },
+            "cl-text-class-3fe157f4-e6ff-4ea4-9c41-3200956bebe8": {
+              "id": "cl-text-class-3fe157f4-e6ff-4ea4-9c41-3200956bebe8",
+              "name": "Input text mobile",
+              "isHeader": false,
+              "styleAttributes": {
+                "color": "rgba(0, 0, 0, 1)",
+                "textAlign": "start",
+                "lineHeight": "120%",
+                "fontWeight": "300",
+                "fontSize": "12px",
+                "textShadow": "none",
+                "fontFamily": null,
+                "letterSpacing": "0px"
+              },
+              "placeholderStyleAttributes": {
+                "color": "rgba(0, 0, 0, 1)"
+              }
+            }
+          },
+          "closeIcon": {
+            "desktop": {
+              "verticalOffset": "-30px",
+              "horizontalOffset": "-30px",
+              "width": "30px",
+              "height": "30px",
+              "content": "0",
+              "inlineSvg": true,
+              "color": "rgba(255, 255, 255, 1)"
+            },
+            "mobile": {
+              "verticalOffset": "5px",
+              "horizontalOffset": "5px",
+              "width": "20px",
+              "height": "20px",
+              "content": "1",
+              "inlineSvg": true,
+              "color": "rgba(0, 0, 0, 1)"
+            }
+          },
+          "googleFonts": [
+            "Poppins"
+          ],
+          "actualSize": {
+            "desktop": {
+              "width": "647px",
+              "height": "360px"
+            },
+            "mobile": {
+              "width": "360px",
+              "height": "413px"
+            }
+          },
+          "cssVars": {},
+          "linkColor": "rgb(0, 0, 238)"
+        },
+        "views": [
+          {
+            "id": "f2724170-8df8-4347-99a2-b9f7d6a41f5a",
+            "path": [
+              0
+            ],
+            "label": "DOCUMENT_VIEW_TYPE_DEFAULT",
+            "type": "VIEW",
+            "name": "SysContainerComponent",
+            "version": "1.0.0",
+            "props": {
+              "adaptiveStyles": {
+                "desktop": [
+                  {
+                    "element": "host",
+                    "styleAttributes": {
+                      "width": "auto",
+                      "minWidth": null,
+                      "height": "auto",
+                      "minHeight": null,
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "10px",
+                      "paddingTop": "0px",
+                      "paddingBottom": "0px",
+                      "paddingLeft": "0px",
+                      "paddingRight": "0px",
+                      "marginTop": "0px",
+                      "marginBottom": "0px",
+                      "marginLeft": "0px",
+                      "marginRight": "0px",
+                      "background": "rgb(255, 255, 255)",
+                      "borderTopWidth": "0px",
+                      "borderBottomWidth": "0px",
+                      "borderLeftWidth": "0px",
+                      "borderRightWidth": "0px",
+                      "borderTopColor": "rgba(196, 196, 196, 1)",
+                      "borderLeftColor": "rgba(196, 196, 196, 1)",
+                      "borderBottomColor": "rgba(196, 196, 196, 1)",
+                      "borderRightColor": "rgba(196, 196, 196, 1)",
+                      "borderTopLeftRadius": "0px",
+                      "borderTopRightRadius": "0px",
+                      "borderBottomLeftRadius": "0px",
+                      "borderBottomRightRadius": "0px",
+                      "boxShadow": "0px 4px 20px 0px rgba(0, 0, 0, 0.25098039215686274)",
+                      "borderTopStyle": "solid",
+                      "borderBottomStyle": "solid",
+                      "borderLeftStyle": "solid",
+                      "borderRightStyle": "solid"
+                    },
+                    "classes": ""
+                  }
+                ],
+                "mobile": [
+                  {
+                    "element": "host",
+                    "styleAttributes": {
+                      "width": "auto",
+                      "minWidth": null,
+                      "height": "auto",
+                      "minHeight": null,
+                      "flexDirection": "column",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "5px",
+                      "paddingTop": "0px",
+                      "paddingBottom": "0px",
+                      "paddingLeft": "0px",
+                      "paddingRight": "0px",
+                      "marginTop": "0px",
+                      "marginBottom": "0px",
+                      "marginLeft": "0px",
+                      "marginRight": "0px",
+                      "background": "rgb(255, 255, 255)",
+                      "borderTopWidth": "0px",
+                      "borderBottomWidth": "0px",
+                      "borderLeftWidth": "0px",
+                      "borderRightWidth": "0px",
+                      "borderTopColor": "rgba(196, 196, 196, 1)",
+                      "borderLeftColor": "rgba(196, 196, 196, 1)",
+                      "borderBottomColor": "rgba(196, 196, 196, 1)",
+                      "borderRightColor": "rgba(196, 196, 196, 1)",
+                      "borderTopLeftRadius": "0px",
+                      "borderTopRightRadius": "0px",
+                      "borderBottomLeftRadius": "0px",
+                      "borderBottomRightRadius": "0px",
+                      "boxShadow": "0px 4px 20px 0px rgba(0, 0, 0, 0.25098039215686274)",
+                      "borderTopStyle": "solid",
+                      "borderBottomStyle": "solid",
+                      "borderLeftStyle": "solid",
+                      "borderRightStyle": "solid"
+                    },
+                    "classes": ""
+                  }
+                ]
+              },
+              "backgroundDynamicInlineSVGElements": null
+            },
+            "children": [
+              {
+                "path": [
+                  0,
+                  0
+                ],
+                "id": "75edf8f4-461f-492b-b80e-eff4282a7b84",
+                "type": "IMAGE",
+                "name": "SysImageComponent",
+                "version": "1.0.0",
+                "props": {
+                  "control": {
+                    "imageSource": {
+                      "url": "https://cdn.claspo.io/img/77/forms/6557/4d817044-f143-46c9-810e-875d5bbe9e05.png"
+                    }
+                  },
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "297px",
+                          "minWidth": "297px",
+                          "height": "340px",
+                          "minHeight": "340px",
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px",
+                          "display": "block",
+                          "zIndex": "0",
+                          "marginBottom": "0px"
+                        },
+                        "classes": ""
+                      },
+                      {
+                        "element": "image",
+                        "styleAttributes": {
+                          "background": "transparent",
+                          "objectFit": "cover",
+                          "borderTopWidth": "0px",
+                          "borderTopColor": "rgb(0, 0, 0)",
+                          "borderBottomWidth": "0px",
+                          "borderBottomColor": "rgb(0, 0, 0)",
+                          "borderLeftWidth": "0px",
+                          "borderLeftColor": "rgb(0, 0, 0)",
+                          "borderRightWidth": "0px",
+                          "borderRightColor": "rgb(0, 0, 0)",
+                          "borderTopLeftRadius": "0px",
+                          "borderTopRightRadius": "0px",
+                          "borderBottomLeftRadius": "0px",
+                          "borderBottomRightRadius": "0px",
+                          "borderTopStyle": "solid",
+                          "borderBottomStyle": "solid",
+                          "borderLeftStyle": "solid",
+                          "borderRightStyle": "solid"
+                        },
+                        "classes": ""
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "calc(100% - 0px)",
+                          "minWidth": null,
+                          "height": "auto",
+                          "minHeight": null,
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px",
+                          "display": "block",
+                          "zIndex": "0"
+                        },
+                        "classes": ""
+                      },
+                      {
+                        "element": "image",
+                        "styleAttributes": {
+                          "background": "transparent",
+                          "objectFit": "cover",
+                          "borderTopWidth": "0px",
+                          "borderTopColor": "rgb(0, 0, 0)",
+                          "borderBottomWidth": "0px",
+                          "borderBottomColor": "rgb(0, 0, 0)",
+                          "borderLeftWidth": "0px",
+                          "borderLeftColor": "rgb(0, 0, 0)",
+                          "borderRightWidth": "0px",
+                          "borderRightColor": "rgb(0, 0, 0)",
+                          "borderTopLeftRadius": "0px",
+                          "borderTopRightRadius": "0px",
+                          "borderBottomLeftRadius": "0px",
+                          "borderBottomRightRadius": "0px",
+                          "borderTopStyle": "solid",
+                          "borderBottomStyle": "solid",
+                          "borderLeftStyle": "solid",
+                          "borderRightStyle": "solid"
+                        },
+                        "classes": ""
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "path": [
+                  0,
+                  1
+                ],
+                "id": "38c21d9d-3c00-47d9-9bcb-cc279ae434f7",
+                "type": "CONTAINER",
+                "name": "SysContainerComponent",
+                "version": "1.0.0",
+                "props": {
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "position": "relative",
+                          "width": "auto",
+                          "minWidth": null,
+                          "height": "auto",
+                          "minHeight": null,
+                          "flexDirection": "column",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "gap": "10px",
+                          "paddingTop": "35px",
+                          "paddingBottom": "35px",
+                          "paddingLeft": "35px",
+                          "paddingRight": "35px",
+                          "marginTop": "15px",
+                          "marginBottom": "15px",
+                          "marginLeft": "15px",
+                          "marginRight": "15px",
+                          "background": "transparent",
+                          "borderTopWidth": "0px",
+                          "borderTopColor": "rgb(0, 0, 0)",
+                          "borderBottomWidth": "0px",
+                          "borderBottomColor": "rgb(0, 0, 0)",
+                          "borderLeftWidth": "0px",
+                          "borderLeftColor": "rgb(0, 0, 0)",
+                          "borderRightWidth": "0px",
+                          "borderRightColor": "rgb(0, 0, 0)",
+                          "borderTopLeftRadius": "0px",
+                          "borderTopRightRadius": "0px",
+                          "borderBottomLeftRadius": "0px",
+                          "borderBottomRightRadius": "0px",
+                          "boxShadow": "none",
+                          "borderTopStyle": "solid",
+                          "borderBottomStyle": "solid",
+                          "borderLeftStyle": "solid",
+                          "borderRightStyle": "solid"
+                        },
+                        "classes": ""
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "position": "relative",
+                          "width": "auto",
+                          "minWidth": null,
+                          "height": "auto",
+                          "minHeight": null,
+                          "flexDirection": "column",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "gap": "10px",
+                          "paddingTop": "15px",
+                          "paddingBottom": "35px",
+                          "paddingLeft": "10px",
+                          "paddingRight": "10px",
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "background": "transparent",
+                          "borderTopWidth": "0px",
+                          "borderTopColor": "rgb(0, 0, 0)",
+                          "borderBottomWidth": "0px",
+                          "borderBottomColor": "rgb(0, 0, 0)",
+                          "borderLeftWidth": "0px",
+                          "borderLeftColor": "rgb(0, 0, 0)",
+                          "borderRightWidth": "0px",
+                          "borderRightColor": "rgb(0, 0, 0)",
+                          "borderTopLeftRadius": "0px",
+                          "borderTopRightRadius": "0px",
+                          "borderBottomLeftRadius": "0px",
+                          "borderBottomRightRadius": "0px",
+                          "boxShadow": "none",
+                          "borderTopStyle": "solid",
+                          "borderBottomStyle": "solid",
+                          "borderLeftStyle": "solid",
+                          "borderRightStyle": "solid"
+                        },
+                        "classes": ""
+                      }
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    "path": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "id": "b88a8fe6-682c-47b2-ac40-51743e49c6d7",
+                    "type": "TEXT",
+                    "name": "SysTextComponent",
+                    "version": "1.0.0",
+                    "props": {
+                      "adaptiveStyles": {
+                        "desktop": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "width": "100%",
+                              "minWidth": null,
+                              "height": "auto",
+                              "minHeight": null,
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "zIndex": "0"
+                            }
+                          },
+                          {
+                            "element": "text",
+                            "styleAttributes": {
+                              "paddingTop": "0px",
+                              "paddingBottom": "0px",
+                              "paddingLeft": "0px",
+                              "paddingRight": "0px",
+                              "color": null,
+                              "textAlign": null,
+                              "lineHeight": null,
+                              "fontWeight": null,
+                              "fontSize": null,
+                              "textShadow": null,
+                              "fontFamily": null,
+                              "letterSpacing": null
+                            },
+                            "classes": "cl-text-class-h1",
+                            "placeholderStyleAttributes": null
+                          }
+                        ],
+                        "mobile": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "width": "100%",
+                              "minWidth": null,
+                              "height": "auto",
+                              "minHeight": null,
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "zIndex": "0"
+                            }
+                          },
+                          {
+                            "element": "text",
+                            "styleAttributes": {
+                              "paddingTop": "0px",
+                              "paddingBottom": "0px",
+                              "paddingLeft": "0px",
+                              "paddingRight": "0px",
+                              "color": null,
+                              "textAlign": null,
+                              "lineHeight": null,
+                              "fontWeight": null,
+                              "fontSize": null,
+                              "textShadow": null,
+                              "fontFamily": null,
+                              "letterSpacing": null
+                            },
+                            "classes": "cl-text-class-h1",
+                            "placeholderStyleAttributes": null
+                          }
+                        ]
+                      },
+                      "content": {
+                        "text": "Title"
+                      }
+                    }
+                  },
+                  {
+                    "path": [
+                      0,
+                      1,
+                      1
+                    ],
+                    "id": "f96fa334-3ea1-4fe0-907a-93fa95ad42a5",
+                    "type": "TEXT",
+                    "name": "SysTextComponent",
+                    "version": "1.0.0",
+                    "props": {
+                      "adaptiveStyles": {
+                        "desktop": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "width": "100%",
+                              "minWidth": null,
+                              "height": "auto",
+                              "minHeight": null,
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "zIndex": "0"
+                            }
+                          },
+                          {
+                            "element": "text",
+                            "styleAttributes": {
+                              "paddingTop": "0px",
+                              "paddingBottom": "0px",
+                              "paddingLeft": "0px",
+                              "paddingRight": "0px",
+                              "color": null,
+                              "textAlign": null,
+                              "lineHeight": null,
+                              "fontWeight": null,
+                              "fontSize": null,
+                              "textShadow": null,
+                              "fontFamily": null,
+                              "letterSpacing": null
+                            },
+                            "classes": "cl-text-class-regular-text",
+                            "placeholderStyleAttributes": null
+                          }
+                        ],
+                        "mobile": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "width": "100%",
+                              "minWidth": null,
+                              "height": "auto",
+                              "minHeight": null,
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "zIndex": "0"
+                            }
+                          },
+                          {
+                            "element": "text",
+                            "styleAttributes": {
+                              "paddingTop": "0px",
+                              "paddingBottom": "0px",
+                              "paddingLeft": "0px",
+                              "paddingRight": "0px",
+                              "color": null,
+                              "textAlign": null,
+                              "lineHeight": null,
+                              "fontWeight": null,
+                              "fontSize": null,
+                              "textShadow": null,
+                              "fontFamily": null,
+                              "letterSpacing": null
+                            },
+                            "classes": "cl-text-class-regular-text",
+                            "placeholderStyleAttributes": null
+                          }
+                        ]
+                      },
+                      "content": {
+                        "text": "Regular text"
+                      }
+                    }
+                  },
+                  {
+                    "path": [
+                      0,
+                      1,
+                      2
+                    ],
+                    "id": "5796ef45-190e-45e4-b60d-e3cc2244ff13",
+                    "type": "INPUT",
+                    "name": "SysInputComponent",
+                    "version": "1.0.0",
+                    "props": {
+                      "content": {
+                        "placeholder": "First name",
+                        "label": "Title",
+                        "suggestionLabel": "Did you mean"
+                      },
+                      "control": {
+                        "name": "first_name",
+                        "integrationName": "first_name",
+                        "defaultValue": "",
+                        "validation": {
+                          "required": true,
+                          "validator": "SYS_NAME",
+                          "validationErrors": {
+                            "NAME_CONTAINS_NUMBERS": "Name contains numbers",
+                            "NAME_CONTAINS_FORBIDDEN_CHARACTERS": "Name contains forbidden characters",
+                            "MAX_LENGTH_40": "Maximum length is 40",
+                            "MAX_LENGTH_50": "Maximum length is 50",
+                            "REQUIRED": "This field can't be empty"
+                          }
+                        }
+                      },
+                      "adaptiveStyles": {
+                        "desktop": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "zIndex": "0"
+                            },
+                            "classes": ""
+                          },
+                          {
+                            "element": "input",
+                            "styleAttributes": {
+                              "background": "rgba(255, 255, 255, 1)",
+                              "borderTopWidth": "1px",
+                              "borderBottomWidth": "1px",
+                              "borderLeftWidth": "1px",
+                              "borderRightWidth": "1px",
+                              "borderTopColor": "rgba(0, 0, 0, 1)",
+                              "borderLeftColor": "rgba(0, 0, 0, 1)",
+                              "borderBottomColor": "rgba(0, 0, 0, 1)",
+                              "borderRightColor": "rgba(0, 0, 0, 1)",
+                              "borderTopLeftRadius": "0px",
+                              "borderTopRightRadius": "0px",
+                              "borderBottomLeftRadius": "0px",
+                              "borderBottomRightRadius": "0px",
+                              "boxShadow": "none",
+                              "paddingTop": "10px",
+                              "paddingBottom": "10px",
+                              "paddingLeft": "10px",
+                              "paddingRight": "10px",
+                              "width": "240px",
+                              "minWidth": "240px",
+                              "height": "40px",
+                              "minHeight": "40px",
+                              "borderTopStyle": "solid",
+                              "borderBottomStyle": "solid",
+                              "borderLeftStyle": "solid",
+                              "borderRightStyle": "solid"
+                            },
+                            "placeholderStyleAttributes": {},
+                            "classes": "cl-text-class-6678abb0-b059-41ad-9ec8-744e85096dc1"
+                          },
+                          {
+                            "element": "label",
+                            "styleAttributes": {},
+                            "params": {
+                              "enabled": false,
+                              "position": "TOP",
+                              "margin": 5
+                            },
+                            "classes": "cl-text-class-input-label"
+                          }
+                        ],
+                        "mobile": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "zIndex": "0"
+                            },
+                            "classes": ""
+                          },
+                          {
+                            "element": "input",
+                            "styleAttributes": {
+                              "background": "rgba(255, 255, 255, 1)",
+                              "borderTopWidth": "1px",
+                              "borderBottomWidth": "1px",
+                              "borderLeftWidth": "1px",
+                              "borderRightWidth": "1px",
+                              "borderTopColor": "rgba(0, 0, 0, 1)",
+                              "borderLeftColor": "rgba(0, 0, 0, 1)",
+                              "borderBottomColor": "rgba(0, 0, 0, 1)",
+                              "borderRightColor": "rgba(0, 0, 0, 1)",
+                              "borderTopLeftRadius": "0px",
+                              "borderTopRightRadius": "0px",
+                              "borderBottomLeftRadius": "0px",
+                              "borderBottomRightRadius": "0px",
+                              "boxShadow": "none",
+                              "paddingTop": "10px",
+                              "paddingBottom": "10px",
+                              "paddingLeft": "10px",
+                              "paddingRight": "10px",
+                              "width": "220px",
+                              "minWidth": "220px",
+                              "height": "35px",
+                              "minHeight": "35px",
+                              "borderTopStyle": "solid",
+                              "borderBottomStyle": "solid",
+                              "borderLeftStyle": "solid",
+                              "borderRightStyle": "solid"
+                            },
+                            "placeholderStyleAttributes": {},
+                            "classes": "cl-text-class-3fe157f4-e6ff-4ea4-9c41-3200956bebe8"
+                          },
+                          {
+                            "element": "label",
+                            "styleAttributes": {},
+                            "params": {
+                              "enabled": false,
+                              "position": "TOP",
+                              "margin": 5
+                            },
+                            "classes": "cl-text-class-input-label"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "path": [
+                      0,
+                      1,
+                      3
+                    ],
+                    "id": "c50d045a-0553-42e6-b674-cb6fbf654db3",
+                    "type": "INPUT",
+                    "name": "SysInputComponent",
+                    "version": "1.0.0",
+                    "props": {
+                      "content": {
+                        "placeholder": "Email",
+                        "label": "Label"
+                      },
+                      "control": {
+                        "name": "email",
+                        "defaultValue": "",
+                        "validation": {
+                          "required": true,
+                          "validator": "EMAIL",
+                          "validationErrors": {
+                            "EMAIL_IS_INVALID": "Email is invalid",
+                            "REQUIRED": "This field can't be empty"
+                          }
+                        }
+                      },
+                      "adaptiveStyles": {
+                        "desktop": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px"
+                            },
+                            "classes": ""
+                          },
+                          {
+                            "element": "input",
+                            "styleAttributes": {
+                              "background": "rgba(255, 255, 255, 1)",
+                              "borderTopWidth": "1px",
+                              "borderBottomWidth": "1px",
+                              "borderLeftWidth": "1px",
+                              "borderRightWidth": "1px",
+                              "borderTopColor": "rgba(0, 0, 0, 1)",
+                              "borderLeftColor": "rgba(0, 0, 0, 1)",
+                              "borderBottomColor": "rgba(0, 0, 0, 1)",
+                              "borderRightColor": "rgba(0, 0, 0, 1)",
+                              "borderTopLeftRadius": "0px",
+                              "borderTopRightRadius": "0px",
+                              "borderBottomLeftRadius": "0px",
+                              "borderBottomRightRadius": "0px",
+                              "boxShadow": "none",
+                              "paddingTop": "10px",
+                              "paddingBottom": "10px",
+                              "paddingLeft": "10px",
+                              "paddingRight": "10px",
+                              "width": "240px",
+                              "minWidth": "240px",
+                              "height": "40px",
+                              "minHeight": "40px",
+                              "borderTopStyle": "solid",
+                              "borderBottomStyle": "solid",
+                              "borderLeftStyle": "solid",
+                              "borderRightStyle": "solid"
+                            },
+                            "placeholderStyleAttributes": {},
+                            "classes": "cl-text-class-6678abb0-b059-41ad-9ec8-744e85096dc1"
+                          },
+                          {
+                            "element": "label",
+                            "styleAttributes": {},
+                            "params": {
+                              "enabled": false,
+                              "position": "TOP",
+                              "margin": 5
+                            },
+                            "classes": "cl-text-class-input-label"
+                          }
+                        ],
+                        "mobile": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px"
+                            },
+                            "classes": ""
+                          },
+                          {
+                            "element": "input",
+                            "styleAttributes": {
+                              "background": "rgba(255, 255, 255, 1)",
+                              "borderTopWidth": "1px",
+                              "borderBottomWidth": "1px",
+                              "borderLeftWidth": "1px",
+                              "borderRightWidth": "1px",
+                              "borderTopColor": "rgba(0, 0, 0, 1)",
+                              "borderLeftColor": "rgba(0, 0, 0, 1)",
+                              "borderBottomColor": "rgba(0, 0, 0, 1)",
+                              "borderRightColor": "rgba(0, 0, 0, 1)",
+                              "borderTopLeftRadius": "0px",
+                              "borderTopRightRadius": "0px",
+                              "borderBottomLeftRadius": "0px",
+                              "borderBottomRightRadius": "0px",
+                              "boxShadow": "none",
+                              "paddingTop": "10px",
+                              "paddingBottom": "10px",
+                              "paddingLeft": "10px",
+                              "paddingRight": "10px",
+                              "width": "220px",
+                              "minWidth": "220px",
+                              "height": "35px",
+                              "minHeight": "35px",
+                              "borderTopStyle": "solid",
+                              "borderBottomStyle": "solid",
+                              "borderLeftStyle": "solid",
+                              "borderRightStyle": "solid"
+                            },
+                            "placeholderStyleAttributes": {},
+                            "classes": "cl-text-class-3fe157f4-e6ff-4ea4-9c41-3200956bebe8"
+                          },
+                          {
+                            "element": "label",
+                            "styleAttributes": {},
+                            "params": {
+                              "enabled": false,
+                              "position": "TOP",
+                              "margin": 5
+                            },
+                            "classes": "cl-text-class-input-label"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "path": [
+                      0,
+                      1,
+                      4
+                    ],
+                    "id": "792576be-1e07-42de-982a-8ad10a82fd06",
+                    "type": "INPUT",
+                    "name": "SysPhoneInputComponent",
+                    "version": "1.0.0",
+                    "props": {
+                      "content": {
+                        "label": "Title"
+                      },
+                      "control": {
+                        "name": "phone",
+                        "countryCode": countryCode,
+                        "validation": {
+                          "required": true,
+                          "validator": "PHONE",
+                          "validationErrors": {
+                            "PHONE_INVALID_NUMBER": "Phone number is invalid",
+                            "REQUIRED": "This field can't be empty"
+                          }
+                        }
+                      },
+                      "adaptiveStyles": {
+                        "desktop": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "zIndex": "0"
+                            },
+                            "classes": ""
+                          },
+                          {
+                            "element": "input",
+                            "styleAttributes": {
+                              "background": "rgba(255, 255, 255, 1)",
+                              "borderTopWidth": "1px",
+                              "borderBottomWidth": "1px",
+                              "borderLeftWidth": "1px",
+                              "borderRightWidth": "1px",
+                              "borderTopColor": "rgba(0, 0, 0, 1)",
+                              "borderLeftColor": "rgba(0, 0, 0, 1)",
+                              "borderBottomColor": "rgba(0, 0, 0, 1)",
+                              "borderRightColor": "rgba(0, 0, 0, 1)",
+                              "borderTopLeftRadius": "0px",
+                              "borderTopRightRadius": "0px",
+                              "borderBottomLeftRadius": "0px",
+                              "borderBottomRightRadius": "0px",
+                              "boxShadow": "none",
+                              "paddingTop": "10px",
+                              "paddingBottom": "10px",
+                              "paddingLeft": "10px",
+                              "paddingRight": "10px",
+                              "width": "240px",
+                              "minWidth": "240px",
+                              "height": "40px",
+                              "minHeight": "40px",
+                              "borderTopStyle": "solid",
+                              "borderBottomStyle": "solid",
+                              "borderLeftStyle": "solid",
+                              "borderRightStyle": "solid"
+                            },
+                            "placeholderStyleAttributes": {},
+                            "classes": "cl-text-class-6678abb0-b059-41ad-9ec8-744e85096dc1"
+                          },
+                          {
+                            "element": "label",
+                            "styleAttributes": {},
+                            "params": {
+                              "enabled": false,
+                              "position": "TOP",
+                              "margin": 5
+                            },
+                            "classes": "cl-text-class-input-label"
+                          }
+                        ],
+                        "mobile": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "zIndex": "0"
+                            },
+                            "classes": ""
+                          },
+                          {
+                            "element": "input",
+                            "styleAttributes": {
+                              "background": "rgba(255, 255, 255, 1)",
+                              "borderTopWidth": "1px",
+                              "borderBottomWidth": "1px",
+                              "borderLeftWidth": "1px",
+                              "borderRightWidth": "1px",
+                              "borderTopColor": "rgba(0, 0, 0, 1)",
+                              "borderLeftColor": "rgba(0, 0, 0, 1)",
+                              "borderBottomColor": "rgba(0, 0, 0, 1)",
+                              "borderRightColor": "rgba(0, 0, 0, 1)",
+                              "borderTopLeftRadius": "0px",
+                              "borderTopRightRadius": "0px",
+                              "borderBottomLeftRadius": "0px",
+                              "borderBottomRightRadius": "0px",
+                              "boxShadow": "none",
+                              "paddingTop": "10px",
+                              "paddingBottom": "10px",
+                              "paddingLeft": "10px",
+                              "paddingRight": "10px",
+                              "width": "220px",
+                              "minWidth": "220px",
+                              "height": "35px",
+                              "minHeight": "35px",
+                              "borderTopStyle": "solid",
+                              "borderBottomStyle": "solid",
+                              "borderLeftStyle": "solid",
+                              "borderRightStyle": "solid"
+                            },
+                            "placeholderStyleAttributes": {},
+                            "classes": "cl-text-class-3fe157f4-e6ff-4ea4-9c41-3200956bebe8"
+                          },
+                          {
+                            "element": "label",
+                            "styleAttributes": {},
+                            "params": {
+                              "enabled": false,
+                              "position": "TOP",
+                              "margin": 5
+                            },
+                            "classes": "cl-text-class-input-label"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "id": "2981a51f-2f84-4822-bbc0-6ddc395bdf62",
+                    "path": [
+                      0,
+                      1,
+                      5
+                    ],
+                    "type": "BUTTON",
+                    "name": "SysButtonComponent",
+                    "version": "1.0.0",
+                    "props": {
+                      "adaptiveStyles": {
+                        "desktop": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "width": "240px",
+                              "minWidth": "240px",
+                              "height": "40px",
+                              "minHeight": "40px",
+                              "builder": {
+                                "styles": {}
+                              }
+                            }
+                          },
+                          {
+                            "element": "button",
+                            "styleAttributes": {
+                              "width": "100%",
+                              "height": "100%",
+                              "background": "rgba(0, 0, 0, 1)",
+                              "borderTopWidth": "0px",
+                              "borderBottomWidth": "0px",
+                              "borderLeftWidth": "0px",
+                              "borderRightWidth": "0px",
+                              "borderTopColor": "rgba(255, 255, 255, 1)",
+                              "borderLeftColor": "rgba(255, 255, 255, 1)",
+                              "borderBottomColor": "rgba(255, 255, 255, 1)",
+                              "borderRightColor": "rgba(255, 255, 255, 1)",
+                              "borderTopLeftRadius": "0px",
+                              "borderTopRightRadius": "0px",
+                              "borderBottomLeftRadius": "0px",
+                              "borderBottomRightRadius": "0px",
+                              "paddingTop": "0px",
+                              "paddingBottom": "0px",
+                              "paddingLeft": "0px",
+                              "paddingRight": "0px",
+                              "boxShadow": "none",
+                              "--cl-PULSE-color": "rgba(0,0,0,0.7)",
+                              "--cl-PULSE-borderRadius": "50px",
+                              "borderTopStyle": "solid",
+                              "borderBottomStyle": "solid",
+                              "borderLeftStyle": "solid",
+                              "borderRightStyle": "solid"
+                            },
+                            "hoverStyleAttributes": {
+                              "background": "rgba(0, 0, 0, 0.73)",
+                              "borderTopColor": "rgba(255, 230, 100, 0)",
+                              "borderLeftColor": "rgba(255, 230, 100, 0)",
+                              "borderBottomColor": "rgba(255, 230, 100, 0)",
+                              "borderRightColor": "rgba(255, 230, 100, 0)",
+                              "boxShadow": null
+                            },
+                            "classes": "cl-text-class-button cl-loop-animation-null",
+                            "hoverAnimationType": null
+                          }
+                        ],
+                        "mobile": [
+                          {
+                            "element": "host",
+                            "styleAttributes": {
+                              "marginTop": "0px",
+                              "marginBottom": "0px",
+                              "marginLeft": "0px",
+                              "marginRight": "0px",
+                              "width": "220px",
+                              "minWidth": "220px",
+                              "height": "35px",
+                              "minHeight": "35px",
+                              "builder": {
+                                "styles": {}
+                              }
+                            }
+                          },
+                          {
+                            "element": "button",
+                            "styleAttributes": {
+                              "width": "100%",
+                              "height": "100%",
+                              "background": "rgba(0, 0, 0, 1)",
+                              "borderTopWidth": "0px",
+                              "borderBottomWidth": "0px",
+                              "borderLeftWidth": "0px",
+                              "borderRightWidth": "0px",
+                              "borderTopColor": "rgba(255, 255, 255, 1)",
+                              "borderLeftColor": "rgba(255, 255, 255, 1)",
+                              "borderBottomColor": "rgba(255, 255, 255, 1)",
+                              "borderRightColor": "rgba(255, 255, 255, 1)",
+                              "borderTopLeftRadius": "0px",
+                              "borderTopRightRadius": "0px",
+                              "borderBottomLeftRadius": "0px",
+                              "borderBottomRightRadius": "0px",
+                              "paddingTop": "0px",
+                              "paddingBottom": "0px",
+                              "paddingLeft": "0px",
+                              "paddingRight": "0px",
+                              "boxShadow": "none",
+                              "borderTopStyle": "solid",
+                              "borderBottomStyle": "solid",
+                              "borderLeftStyle": "solid",
+                              "borderRightStyle": "solid"
+                            },
+                            "hoverStyleAttributes": {
+                              "background": "rgba(0, 0, 0, 0.73)",
+                              "borderTopColor": "rgba(255, 230, 100, 0)",
+                              "borderLeftColor": "rgba(255, 230, 100, 0)",
+                              "borderBottomColor": "rgba(255, 230, 100, 0)",
+                              "borderRightColor": "rgba(255, 230, 100, 0)",
+                              "boxShadow": null
+                            },
+                            "classes": "cl-text-class-f38ae9ad-f7ac-4a90-88e7-1edb856cd7e5 cl-loop-animation-null",
+                            "hoverAnimationType": null
+                          }
+                        ]
+                      },
+                      "content": {
+                        "text": "BUTTON"
+                      },
+                      "handlers": [
+                        {
+                          "type": "CLICK",
+                          "relativeSelector": "button",
+                          "actions": [
+                            {
+                              "type": "SUBSCRIBE_CONTACT",
+                              "params": {
+                                "viewIndexOnSuccess": 1,
+                                "viewIndexOnSubscribed": 2,
+                                "viewIndexOnError": 3
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "5a1ec780-ec1b-4aa5-b755-df48f3d57c55",
+            "path": [
+              1
+            ],
+            "label": "DOCUMENT_VIEW_TYPE_SUCCESS",
+            "type": "VIEW",
+            "name": "SysContainerComponent",
+            "version": "1.0.0",
+            "props": {
+              "adaptiveStyles": {
+                "desktop": [
+                  {
+                    "element": "host",
+                    "styleAttributes": {
+                      "width": "auto",
+                      "minWidth": null,
+                      "height": "auto",
+                      "minHeight": null,
+                      "flexDirection": "column",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "10px",
+                      "paddingTop": "30px",
+                      "paddingBottom": "30px",
+                      "paddingLeft": "30px",
+                      "paddingRight": "30px",
+                      "marginTop": "0px",
+                      "marginBottom": "0px",
+                      "marginLeft": "0px",
+                      "marginRight": "0px",
+                      "background": "rgb(255, 255, 255)",
+                      "borderTopWidth": "0px",
+                      "borderTopColor": "rgba(196, 196, 196, 1)",
+                      "borderBottomWidth": "0px",
+                      "borderBottomColor": "rgba(196, 196, 196, 1)",
+                      "borderLeftWidth": "0px",
+                      "borderLeftColor": "rgba(196, 196, 196, 1)",
+                      "borderRightWidth": "0px",
+                      "borderRightColor": "rgba(196, 196, 196, 1)",
+                      "borderTopLeftRadius": "0px",
+                      "borderTopRightRadius": "0px",
+                      "borderBottomLeftRadius": "0px",
+                      "borderBottomRightRadius": "0px",
+                      "boxShadow": "0px 4px 20px 0px rgba(0, 0, 0, 0.25098039215686274)",
+                      "borderTopStyle": "solid",
+                      "borderBottomStyle": "solid",
+                      "borderLeftStyle": "solid",
+                      "borderRightStyle": "solid"
+                    },
+                    "classes": ""
+                  }
+                ],
+                "mobile": [
+                  {
+                    "element": "host",
+                    "styleAttributes": {
+                      "width": "auto",
+                      "minWidth": null,
+                      "height": "auto",
+                      "minHeight": null,
+                      "flexDirection": "column",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "5px",
+                      "paddingTop": "20px",
+                      "paddingBottom": "20px",
+                      "paddingLeft": "20px",
+                      "paddingRight": "20px",
+                      "marginTop": "0px",
+                      "marginBottom": "0px",
+                      "marginLeft": "0px",
+                      "marginRight": "0px",
+                      "background": "rgb(255, 255, 255)",
+                      "borderTopWidth": "0px",
+                      "borderTopColor": "rgba(196, 196, 196, 1)",
+                      "borderBottomWidth": "0px",
+                      "borderBottomColor": "rgba(196, 196, 196, 1)",
+                      "borderLeftWidth": "0px",
+                      "borderLeftColor": "rgba(196, 196, 196, 1)",
+                      "borderRightWidth": "0px",
+                      "borderRightColor": "rgba(196, 196, 196, 1)",
+                      "borderTopLeftRadius": "0px",
+                      "borderTopRightRadius": "0px",
+                      "borderBottomLeftRadius": "0px",
+                      "borderBottomRightRadius": "0px",
+                      "boxShadow": "0px 4px 20px 0px rgba(0, 0, 0, 0.25098039215686274)",
+                      "borderTopStyle": "solid",
+                      "borderBottomStyle": "solid",
+                      "borderLeftStyle": "solid",
+                      "borderRightStyle": "solid"
+                    },
+                    "classes": ""
+                  }
+                ]
+              },
+              "backgroundDynamicInlineSVGElements": null
+            },
+            "children": [
+              {
+                "path": [
+                  1,
+                  0
+                ],
+                "id": "0095e681-b7ca-4a4c-bff5-a7dbe6a080c4",
+                "type": "TEXT",
+                "name": "SysTextComponent",
+                "version": "1.0.0",
+                "props": {
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "354px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "354px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-h1"
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "250px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "250px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-h1"
+                      }
+                    ]
+                  },
+                  "content": {
+                    "text": "Thanks for subscribe!"
+                  }
+                }
+              },
+              {
+                "path": [
+                  1,
+                  1
+                ],
+                "id": "81d43cd1-da7b-4583-8968-1665cf3037de",
+                "type": "PROMO_CODE",
+                "name": "SysPromoCodeComponent",
+                "version": "1.0.0",
+                "props": {
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "165px",
+                          "minWidth": "165px",
+                          "height": "auto",
+                          "minHeight": null,
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "zIndex": "0"
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "background": "rgb(255, 255, 255)",
+                          "borderTopWidth": "2px",
+                          "borderTopColor": "rgb(0, 0, 0)",
+                          "borderBottomWidth": "2px",
+                          "borderBottomColor": "rgb(0, 0, 0)",
+                          "borderLeftWidth": "2px",
+                          "borderLeftColor": "rgb(0, 0, 0)",
+                          "borderRightWidth": "2px",
+                          "borderRightColor": "rgb(0, 0, 0)",
+                          "borderTopLeftRadius": "0px",
+                          "borderTopRightRadius": "0px",
+                          "borderBottomLeftRadius": "0px",
+                          "borderBottomRightRadius": "0px",
+                          "boxShadow": "none",
+                          "paddingTop": "10px",
+                          "paddingBottom": "10px",
+                          "paddingLeft": "10px",
+                          "paddingRight": "10px",
+                          "color": "rgb(0, 0, 0)",
+                          "textAlign": "center",
+                          "lineHeight": "120%",
+                          "fontWeight": "400",
+                          "fontSize": "18px",
+                          "textShadow": "none",
+                          "fontFamily": null,
+                          "borderTopStyle": "dashed",
+                          "borderBottomStyle": "dashed",
+                          "borderLeftStyle": "dashed",
+                          "borderRightStyle": "dashed"
+                        },
+                        "hoverStyleAttributes": {},
+                        "classes": ""
+                      },
+                      {
+                        "element": "icon",
+                        "styleAttributes": {
+                          "display": "none",
+                          "position": "static",
+                          "marginLeft": "15px",
+                          "right": "5px",
+                          "color": "#000000",
+                          "--clPromocodeIconWidth": "24px",
+                          "--clPromocodeIconHeight": "24px"
+                        },
+                        "classes": ""
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "auto",
+                          "minWidth": null,
+                          "height": "auto",
+                          "minHeight": null,
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "zIndex": "0"
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "background": "rgb(255, 255, 255)",
+                          "borderTopWidth": "1px",
+                          "borderTopColor": "rgb(0, 0, 0)",
+                          "borderBottomWidth": "1px",
+                          "borderBottomColor": "rgb(0, 0, 0)",
+                          "borderLeftWidth": "1px",
+                          "borderLeftColor": "rgb(0, 0, 0)",
+                          "borderRightWidth": "1px",
+                          "borderRightColor": "rgb(0, 0, 0)",
+                          "borderTopLeftRadius": "0px",
+                          "borderTopRightRadius": "0px",
+                          "borderBottomLeftRadius": "0px",
+                          "borderBottomRightRadius": "0px",
+                          "boxShadow": "none",
+                          "paddingTop": "10px",
+                          "paddingBottom": "10px",
+                          "paddingLeft": "10px",
+                          "paddingRight": "10px",
+                          "color": "rgb(50, 66, 67)",
+                          "textAlign": "center",
+                          "lineHeight": "120%",
+                          "fontWeight": "400",
+                          "fontSize": "18px",
+                          "textShadow": "none",
+                          "fontFamily": null,
+                          "borderTopStyle": "dashed",
+                          "borderBottomStyle": "dashed",
+                          "borderLeftStyle": "dashed",
+                          "borderRightStyle": "dashed"
+                        },
+                        "hoverStyleAttributes": {},
+                        "classes": ""
+                      },
+                      {
+                        "element": "icon",
+                        "styleAttributes": {
+                          "display": "none",
+                          "position": "static",
+                          "marginLeft": "15px",
+                          "right": "5px",
+                          "color": "#000000",
+                          "--clPromocodeIconWidth": "24px",
+                          "--clPromocodeIconHeight": "24px"
+                        },
+                        "classes": ""
+                      }
+                    ]
+                  },
+                  "content": {
+                    "text": "SALE_15",
+                    "iconContent": null
+                  }
+                }
+              },
+              {
+                "path": [
+                  1,
+                  2
+                ],
+                "id": "70d2c165-a4bb-4369-abc5-e15778ad832b",
+                "type": "TEXT",
+                "name": "SysTextComponent",
+                "version": "1.0.0",
+                "props": {
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "354px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "10px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "354px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-regular-text"
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "250px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "10px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "250px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-regular-text"
+                      }
+                    ]
+                  },
+                  "content": {
+                    "text": "We’ve sent an email with a confirmation link to your email address. To complete subscription, please click the confirmation link."
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "bc4056df-bfa2-4ec8-a58c-8e97084507b6",
+            "path": [
+              2
+            ],
+            "label": "DOCUMENT_VIEW_TYPE_SUBSCRIBED",
+            "type": "VIEW",
+            "name": "SysContainerComponent",
+            "version": "1.0.0",
+            "props": {
+              "adaptiveStyles": {
+                "desktop": [
+                  {
+                    "element": "host",
+                    "styleAttributes": {
+                      "width": "auto",
+                      "minWidth": null,
+                      "height": "auto",
+                      "minHeight": null,
+                      "flexDirection": "column",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "10px",
+                      "paddingTop": "30px",
+                      "paddingBottom": "30px",
+                      "paddingLeft": "30px",
+                      "paddingRight": "30px",
+                      "marginTop": "0px",
+                      "marginBottom": "0px",
+                      "marginLeft": "0px",
+                      "marginRight": "0px",
+                      "background": "rgb(255, 255, 255)",
+                      "borderTopWidth": "0px",
+                      "borderTopColor": "rgba(196, 196, 196, 1)",
+                      "borderBottomWidth": "0px",
+                      "borderBottomColor": "rgba(196, 196, 196, 1)",
+                      "borderLeftWidth": "0px",
+                      "borderLeftColor": "rgba(196, 196, 196, 1)",
+                      "borderRightWidth": "0px",
+                      "borderRightColor": "rgba(196, 196, 196, 1)",
+                      "borderTopLeftRadius": "0px",
+                      "borderTopRightRadius": "0px",
+                      "borderBottomLeftRadius": "0px",
+                      "borderBottomRightRadius": "0px",
+                      "boxShadow": "0px 4px 20px 0px rgba(0, 0, 0, 0.25098039215686274)",
+                      "borderTopStyle": "solid",
+                      "borderBottomStyle": "solid",
+                      "borderLeftStyle": "solid",
+                      "borderRightStyle": "solid"
+                    },
+                    "classes": ""
+                  }
+                ],
+                "mobile": [
+                  {
+                    "element": "host",
+                    "styleAttributes": {
+                      "width": "auto",
+                      "minWidth": null,
+                      "height": "auto",
+                      "minHeight": null,
+                      "flexDirection": "column",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "5px",
+                      "paddingTop": "20px",
+                      "paddingBottom": "20px",
+                      "paddingLeft": "20px",
+                      "paddingRight": "20px",
+                      "marginTop": "0px",
+                      "marginBottom": "0px",
+                      "marginLeft": "0px",
+                      "marginRight": "0px",
+                      "background": "rgb(255, 255, 255)",
+                      "borderTopWidth": "0px",
+                      "borderTopColor": "rgba(196, 196, 196, 1)",
+                      "borderBottomWidth": "0px",
+                      "borderBottomColor": "rgba(196, 196, 196, 1)",
+                      "borderLeftWidth": "0px",
+                      "borderLeftColor": "rgba(196, 196, 196, 1)",
+                      "borderRightWidth": "0px",
+                      "borderRightColor": "rgba(196, 196, 196, 1)",
+                      "borderTopLeftRadius": "0px",
+                      "borderTopRightRadius": "0px",
+                      "borderBottomLeftRadius": "0px",
+                      "borderBottomRightRadius": "0px",
+                      "boxShadow": "0px 4px 20px 0px rgba(0, 0, 0, 0.25098039215686274)",
+                      "borderTopStyle": "solid",
+                      "borderBottomStyle": "solid",
+                      "borderLeftStyle": "solid",
+                      "borderRightStyle": "solid"
+                    },
+                    "classes": ""
+                  }
+                ]
+              },
+              "backgroundDynamicInlineSVGElements": null
+            },
+            "children": [
+              {
+                "path": [
+                  2,
+                  0
+                ],
+                "id": "94aeb88a-9992-4b7e-a7d9-2e45880a3fe9",
+                "type": "TEXT",
+                "name": "SysTextComponent",
+                "version": "1.0.0",
+                "props": {
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "354px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "354px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-h1"
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "250px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "250px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-754b776e-789f-452d-983b-869db3ab0df4"
+                      }
+                    ]
+                  },
+                  "content": {
+                    "text": "You’re already subscribed"
+                  }
+                }
+              },
+              {
+                "path": [
+                  2,
+                  1
+                ],
+                "id": "1c8174c7-76dc-402a-82d8-0c413b782bb2",
+                "type": "TEXT",
+                "name": "SysTextComponent",
+                "version": "1.0.0",
+                "props": {
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "354px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "10px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "354px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-regular-text"
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "250px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "10px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "250px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-regular-text"
+                      }
+                    ]
+                  },
+                  "content": {
+                    "text": "If you aren’t getting our emails, please check your Spam folder in case they are being delivered there instead of Inbox.  "
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "be75344e-3a02-4854-8e30-3d3578509297",
+            "path": [
+              3
+            ],
+            "label": "DOCUMENT_VIEW_TYPE_ERROR",
+            "type": "VIEW",
+            "name": "SysContainerComponent",
+            "version": "1.0.0",
+            "props": {
+              "adaptiveStyles": {
+                "desktop": [
+                  {
+                    "element": "host",
+                    "styleAttributes": {
+                      "width": "auto",
+                      "minWidth": null,
+                      "height": "auto",
+                      "minHeight": null,
+                      "flexDirection": "column",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "10px",
+                      "paddingTop": "30px",
+                      "paddingBottom": "30px",
+                      "paddingLeft": "30px",
+                      "paddingRight": "30px",
+                      "marginTop": "0px",
+                      "marginBottom": "0px",
+                      "marginLeft": "0px",
+                      "marginRight": "0px",
+                      "background": "rgb(255, 255, 255)",
+                      "borderTopWidth": "0px",
+                      "borderTopColor": "rgba(196, 196, 196, 1)",
+                      "borderBottomWidth": "0px",
+                      "borderBottomColor": "rgba(196, 196, 196, 1)",
+                      "borderLeftWidth": "0px",
+                      "borderLeftColor": "rgba(196, 196, 196, 1)",
+                      "borderRightWidth": "0px",
+                      "borderRightColor": "rgba(196, 196, 196, 1)",
+                      "borderTopLeftRadius": "0px",
+                      "borderTopRightRadius": "0px",
+                      "borderBottomLeftRadius": "0px",
+                      "borderBottomRightRadius": "0px",
+                      "boxShadow": "0px 4px 20px 0px rgba(0, 0, 0, 0.25098039215686274)",
+                      "borderTopStyle": "solid",
+                      "borderBottomStyle": "solid",
+                      "borderLeftStyle": "solid",
+                      "borderRightStyle": "solid"
+                    },
+                    "classes": ""
+                  }
+                ],
+                "mobile": [
+                  {
+                    "element": "host",
+                    "styleAttributes": {
+                      "width": "auto",
+                      "minWidth": null,
+                      "height": "auto",
+                      "minHeight": null,
+                      "flexDirection": "column",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "gap": "5px",
+                      "paddingTop": "20px",
+                      "paddingBottom": "20px",
+                      "paddingLeft": "20px",
+                      "paddingRight": "20px",
+                      "marginTop": "0px",
+                      "marginBottom": "0px",
+                      "marginLeft": "0px",
+                      "marginRight": "0px",
+                      "background": "rgb(255, 255, 255)",
+                      "borderTopWidth": "0px",
+                      "borderTopColor": "rgba(196, 196, 196, 1)",
+                      "borderBottomWidth": "0px",
+                      "borderBottomColor": "rgba(196, 196, 196, 1)",
+                      "borderLeftWidth": "0px",
+                      "borderLeftColor": "rgba(196, 196, 196, 1)",
+                      "borderRightWidth": "0px",
+                      "borderRightColor": "rgba(196, 196, 196, 1)",
+                      "borderTopLeftRadius": "0px",
+                      "borderTopRightRadius": "0px",
+                      "borderBottomLeftRadius": "0px",
+                      "borderBottomRightRadius": "0px",
+                      "boxShadow": "0px 4px 20px 0px rgba(0, 0, 0, 0.25098039215686274)",
+                      "borderTopStyle": "solid",
+                      "borderBottomStyle": "solid",
+                      "borderLeftStyle": "solid",
+                      "borderRightStyle": "solid"
+                    },
+                    "classes": ""
+                  }
+                ]
+              },
+              "backgroundDynamicInlineSVGElements": null
+            },
+            "children": [
+              {
+                "path": [
+                  3,
+                  0
+                ],
+                "id": "9597d26c-37ab-4209-95e9-5b3414a295eb",
+                "type": "TEXT",
+                "name": "SysTextComponent",
+                "version": "1.0.0",
+                "props": {
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "354px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "354px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-h1"
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "250px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "250px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-754b776e-789f-452d-983b-869db3ab0df4"
+                      }
+                    ]
+                  },
+                  "content": {
+                    "text": "Oops! Something went wrong!"
+                  }
+                }
+              },
+              {
+                "path": [
+                  3,
+                  1
+                ],
+                "id": "87bc1b0b-ae6c-468f-8eec-09633020914b",
+                "type": "TEXT",
+                "name": "SysTextComponent",
+                "version": "1.0.0",
+                "props": {
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "354px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "10px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "354px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-regular-text"
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "width": "250px",
+                          "height": "auto",
+                          "marginTop": "0px",
+                          "marginBottom": "10px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "minWidth": "250px",
+                          "minHeight": null
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "styleAttributes": {
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px"
+                        },
+                        "classes": "cl-text-class-regular-text"
+                      }
+                    ]
+                  },
+                  "content": {
+                    "text": "Subscription failed. Please try to subscribe again!"
+                  }
+                }
+              },
+              {
+                "path": [
+                  3,
+                  2
+                ],
+                "id": "e0db8ebf-5067-4799-9b8a-1c16f86a4974",
+                "type": "BUTTON",
+                "name": "SysButtonComponent",
+                "version": "1.0.0",
+                "props": {
+                  "adaptiveStyles": {
+                    "desktop": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "width": "240px",
+                          "minWidth": "240px",
+                          "height": "40px",
+                          "minHeight": "40px",
+                          "builder": {
+                            "styles": {}
+                          }
+                        }
+                      },
+                      {
+                        "element": "button",
+                        "styleAttributes": {
+                          "width": "100%",
+                          "height": "100%",
+                          "background": "rgba(0, 0, 0, 1)",
+                          "borderTopWidth": "0px",
+                          "borderBottomWidth": "0px",
+                          "borderLeftWidth": "0px",
+                          "borderRightWidth": "0px",
+                          "borderTopColor": "rgba(255, 255, 255, 1)",
+                          "borderLeftColor": "rgba(255, 255, 255, 1)",
+                          "borderBottomColor": "rgba(255, 255, 255, 1)",
+                          "borderRightColor": "rgba(255, 255, 255, 1)",
+                          "borderTopLeftRadius": "0px",
+                          "borderTopRightRadius": "0px",
+                          "borderBottomLeftRadius": "0px",
+                          "borderBottomRightRadius": "0px",
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px",
+                          "boxShadow": "none",
+                          "borderTopStyle": "solid",
+                          "borderBottomStyle": "solid",
+                          "borderLeftStyle": "solid",
+                          "borderRightStyle": "solid"
+                        },
+                        "hoverStyleAttributes": {
+                          "background": "rgba(0, 0, 0, 0.73)",
+                          "borderTopColor": "rgba(255, 230, 100, 0)",
+                          "borderLeftColor": "rgba(255, 230, 100, 0)",
+                          "borderBottomColor": "rgba(255, 230, 100, 0)",
+                          "borderRightColor": "rgba(255, 230, 100, 0)",
+                          "boxShadow": null
+                        },
+                        "classes": "cl-text-class-button",
+                        "hoverAnimationType": null
+                      }
+                    ],
+                    "mobile": [
+                      {
+                        "element": "host",
+                        "styleAttributes": {
+                          "marginTop": "0px",
+                          "marginBottom": "0px",
+                          "marginLeft": "0px",
+                          "marginRight": "0px",
+                          "width": "220px",
+                          "minWidth": "220px",
+                          "height": "35px",
+                          "minHeight": "35px",
+                          "builder": {
+                            "styles": {}
+                          }
+                        }
+                      },
+                      {
+                        "element": "button",
+                        "styleAttributes": {
+                          "width": "100%",
+                          "height": "100%",
+                          "background": "rgba(0, 0, 0, 1)",
+                          "borderTopWidth": "0px",
+                          "borderBottomWidth": "0px",
+                          "borderLeftWidth": "0px",
+                          "borderRightWidth": "0px",
+                          "borderTopColor": "rgba(255, 255, 255, 1)",
+                          "borderLeftColor": "rgba(255, 255, 255, 1)",
+                          "borderBottomColor": "rgba(255, 255, 255, 1)",
+                          "borderRightColor": "rgba(255, 255, 255, 1)",
+                          "borderTopLeftRadius": "0px",
+                          "borderTopRightRadius": "0px",
+                          "borderBottomLeftRadius": "0px",
+                          "borderBottomRightRadius": "0px",
+                          "paddingTop": "0px",
+                          "paddingBottom": "0px",
+                          "paddingLeft": "0px",
+                          "paddingRight": "0px",
+                          "boxShadow": "none",
+                          "borderTopStyle": "solid",
+                          "borderBottomStyle": "solid",
+                          "borderLeftStyle": "solid",
+                          "borderRightStyle": "solid"
+                        },
+                        "hoverStyleAttributes": {
+                          "background": "rgba(0, 0, 0, 0.73)",
+                          "borderTopColor": "rgba(255, 230, 100, 0)",
+                          "borderLeftColor": "rgba(255, 230, 100, 0)",
+                          "borderBottomColor": "rgba(255, 230, 100, 0)",
+                          "borderRightColor": "rgba(255, 230, 100, 0)",
+                          "boxShadow": null
+                        },
+                        "classes": "cl-text-class-f38ae9ad-f7ac-4a90-88e7-1edb856cd7e5",
+                        "hoverAnimationType": null
+                      }
+                    ]
+                  },
+                  "content": {
+                    "text": "TRY AGAIN!"
+                  },
+                  "handlers": [
+                    {
+                      "type": "CLICK",
+                      "actions": [
+                        {
+                          "type": "SUBSCRIBE_CONTACT",
+                          "params": {
+                            "viewIndexOnSuccess": 1,
+                            "viewIndexOnSubscribed": 2,
+                            "viewIndexOnError": 3
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }),
+      "sync": "{\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\":[{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"f2724170-8df8-4347-99a2-b9f7d6a41f5a\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"75edf8f4-461f-492b-b80e-eff4282a7b84\":[{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"image\",\"control\":\"RADIO_BUTTONS\",\"syncControlPropertyName\":\"objectFit\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"image\",\"control\":\"RADIO_BUTTONS\",\"syncControlPropertyName\":\"objectFit\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"image\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"image\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"75edf8f4-461f-492b-b80e-eff4282a7b84\",\"viewEntryType\":\"IMAGE\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\":[{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"38c21d9d-3c00-47d9-9bcb-cc279ae434f7\",\"viewEntryType\":\"CONTAINER\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\":[{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"b88a8fe6-682c-47b2-ac40-51743e49c6d7\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\":[{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"f96fa334-3ea1-4fe0-907a-93fa95ad42a5\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"5796ef45-190e-45e4-b60d-e3cc2244ff13\":[{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"label\",\"control\":\"INPUT_LABEL\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"5796ef45-190e-45e4-b60d-e3cc2244ff13\",\"viewEntryType\":\"INPUT\",\"element\":\"label\",\"control\":\"INPUT_LABEL\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null}],\"c50d045a-0553-42e6-b674-cb6fbf654db3\":[{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"label\",\"control\":\"INPUT_LABEL\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"c50d045a-0553-42e6-b674-cb6fbf654db3\",\"viewEntryType\":\"INPUT\",\"element\":\"label\",\"control\":\"INPUT_LABEL\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null}],\"792576be-1e07-42de-982a-8ad10a82fd06\":[{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"input\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"label\",\"control\":\"INPUT_LABEL\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"792576be-1e07-42de-982a-8ad10a82fd06\",\"viewEntryType\":\"INPUT\",\"element\":\"label\",\"control\":\"INPUT_LABEL\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null}],\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\":[{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"ICON\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"ICON\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"TEXT_VISIBILITY\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"TEXT_VISIBILITY\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"HOVER_ANIMATION\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"2981a51f-2f84-4822-bbc0-6ddc395bdf62\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"HOVER_ANIMATION\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"}],\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\":[{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"5a1ec780-ec1b-4aa5-b755-df48f3d57c55\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\":[{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"0095e681-b7ca-4a4c-bff5-a7dbe6a080c4\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"81d43cd1-da7b-4583-8968-1665cf3037de\":[{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"HOVER_ANIMATION\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"text\",\"control\":\"HOVER_ANIMATION\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"icon\",\"control\":\"PROMOCODE_ICON\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"81d43cd1-da7b-4583-8968-1665cf3037de\",\"viewEntryType\":\"PROMO_CODE\",\"element\":\"icon\",\"control\":\"PROMOCODE_ICON\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"}],\"70d2c165-a4bb-4369-abc5-e15778ad832b\":[{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"70d2c165-a4bb-4369-abc5-e15778ad832b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\":[{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"bc4056df-bfa2-4ec8-a58c-8e97084507b6\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\":[{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"94aeb88a-9992-4b7e-a7d9-2e45880a3fe9\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"1c8174c7-76dc-402a-82d8-0c413b782bb2\":[{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"1c8174c7-76dc-402a-82d8-0c413b782bb2\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"be75344e-3a02-4854-8e30-3d3578509297\":[{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"ALIGNMENT\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"be75344e-3a02-4854-8e30-3d3578509297\",\"viewEntryType\":\"VIEW\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"9597d26c-37ab-4209-95e9-5b3414a295eb\":[{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"9597d26c-37ab-4209-95e9-5b3414a295eb\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"87bc1b0b-ae6c-468f-8eec-09633020914b\":[{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"text\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":null},{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":null},{\"componentId\":\"87bc1b0b-ae6c-468f-8eec-09633020914b\",\"viewEntryType\":\"TEXT\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":null}],\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\":[{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"width\",\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"SIZE\",\"syncControlPropertyName\":\"height\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BACKGROUND\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"ICON\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"ICON\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"TEXT_VISIBILITY\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"TEXT_VISIBILITY\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BORDERS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BORDER_RADIUS\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"BOX_SHADOW\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"padding\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"host\",\"control\":\"INDENTATION\",\"syncControlPropertyName\":\"margin\",\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"HOVER_ANIMATION\",\"syncControlPropertyName\":null,\"env\":\"DESKTOP\",\"syncState\":\"CROSS_ENV\"},{\"componentId\":\"e0db8ebf-5067-4799-9b8a-1c16f86a4974\",\"viewEntryType\":\"BUTTON\",\"element\":\"button\",\"control\":\"HOVER_ANIMATION\",\"syncControlPropertyName\":null,\"env\":\"MOBILE\",\"syncState\":\"CROSS_ENV\"}]}"
+    }
+  ];
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const imagesManagementAPI = {
+      getFilesFromCommonDir: mockObservableWithResponse([
+        {url: 'https://www.shutterstock.com/shutterstock/photos/236749852/display_1500/stock-vector-watercolor-space-texture-with-glowing-stars-night-starry-sky-with-paint-strokes-and-swashes-236749852.jpg'}
+      ]),
+      getImageLibrary: mockObservableWithResponse({
+        total: 10,
+        fromCache: true,
+        data: [{url: 'https://www.shutterstock.com/shutterstock/photos/236749852/display_1500/stock-vector-watercolor-space-texture-with-glowing-stars-night-starry-sky-with-paint-strokes-and-swashes-236749852.jpg'}]
+      }),
+      getUserImages: mockObservableWithResponse({
+        total: 10,
+        items: [{url: 'https://www.shutterstock.com/shutterstock/photos/236749852/display_1500/stock-vector-watercolor-space-texture-with-glowing-stars-night-starry-sky-with-paint-strokes-and-swashes-236749852.jpg'}]
+      }),
+      uploadImage: mockObservableWithResponse,
+      uploadImageByUrl: mockObservableWithResponse
+
+    };
+    const config = {
+
+      editorScriptsUrl: 'EDITOR_SCRIPTS_URL',
+      staticResourcesUrl: 'STATIC_RESOURCES_URL',
+
+
+      countryCode: countryCode,
+
+
+      containerElement: document.getElementById('claspo-editor'),
+      hideSaveOptionsMenu: true,
+      closeEditorCallback: (variant) => console.log('closeEditorCallback', variant),
+      afterSavedCallback: (variant) => console.log('afterSavedCallback', variant),
+      notificationHandlers: {
+        success: (message) => console.log('notificationHandler.success', message),
+        info: (message) => console.log('notificationHandler.info', message),
+        warning: (message) => console.log('notificationHandler.warning', message),
+        error: (message) => console.log('notificationHandler.error', message),
+        hide: () => console.log('notificationHandler.hide'),
+      },
+      navigateToWidgetCallback: (widget) => console.log('navigateToWidgetCallback', widget),
+      showChatMessageCallback: (message) => console.log('showChatMessageCallback', message),
+
+
+      getWidgetDataCallback: () => {
+
+        return of({
+          language: widgetLanguage,
+          revision: '1',
+          layoutType: 'BUILT_IN',
+          widgetType: 'SUBSCRIPTION_FORM',
+          widget: {
+            id: widgetId,
+            name: 'Widget Name',
+          },
+          appearances: window.appearances,
+          languages: [],
+          userInfo: {
+            language: userInterfaceLanguage,
+          }
+        });
+      },
+
+      saveWidgetDataCallback: (data) => {
+        window.appearances = data.updatedAppearances;
+        console.log('saveWidgetDataCallback', data);
+        return of({success: true});
+      },
+
+
+      api: {...imagesManagementAPI},
+
+      analyticsNotificationsEnabled: false,
+
+      actionOptions: {
+        availableClickActions: [
+          'OPEN_LINK',
+          'CLOSE_WIDGET',
+          'CLICK',
+          'SUBSCRIBE_CONTACT'
+        ],
+        isDisplayingOpenLinkNewTabSwitch: true,
+        isDisplayingCustomData: false,
+        isAllowDeepLink: true,
+      }
+    };
+
+
+    const script = document.createElement('script');
+    script.src = 'EDITOR_SCRIPTS_URL/activator.js';
+    script.onload = () => {
+      window['ClaspoEditor'].init(config,
+        () => console.log("editor loaded"),
+        () => console.log("editor wasn't loaded"),
+      );
+    };
+    document.body.appendChild(script);
+  });
+
+
+</script>
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
+            class="fa fa-bars"></i>  Menu
+    </button>
+    <span class="w3-bar-item w3-right">Logo</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:100px;" id="mySidebar"><br>
+    <div class="w3-container w3-row">
+        <div class="w3-col s4">
+
+        </div>
+        <div class="w3-col s8 w3-bar">
+            <span>Welcome</span><br>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+        </div>
+    </div>
+    <hr>
+    <div class="w3-container">
+        <h5>Dashboard</h5>
+    </div>
+    <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+           onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Widget
+            Editor</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+    </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:100px;margin-top:43px;">
+    Editor Demo
+    <div id="claspo-editor"></div>
+</div>
+
+<script>
+  // Get the Sidebar
+  var mySidebar = document.getElementById("mySidebar");
+
+  // Get the DIV with overlay effect
+  var overlayBg = document.getElementById("myOverlay");
+
+  // Toggle between showing and hiding the sidebar, and add overlay effect
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+      overlayBg.style.display = "none";
+    } else {
+      mySidebar.style.display = 'block';
+      overlayBg.style.display = "block";
+    }
+  }
+
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
