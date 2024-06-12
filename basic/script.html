@@ -12,7 +12,8 @@
 
     const document = appearances[0].document; // window.appearances from editor.html
     const module = await import('STATIC_RESOURCES_URL/script.esm.js');
-    const clWidgetApi = new module.WidgetAPI();
+    const config = {staticResourcesUrl: 'STATIC_RESOURCES_URL'}
+    const clWidgetApi = new module.WidgetAPI(config);
     const widgetConfig = {
       type: 'BUILT_IN',
       placements: [{
